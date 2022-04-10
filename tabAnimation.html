@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /*第0个盒子css*/
+    .tab-container {
+      border: 1px solid #ccc;
+      margin: 50px auto;
+      padding: 20px 0;
+      width: 400px;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #99AFC6;
+    }
+
+
+    .tab-container .title {
+      font-size: 16px;
+      line-height: 16px;
+      color: #F3A310;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+
+    .tab-container .tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li, ul {
+      list-style: none;
+    }
+
+
+    .tab-container .tabs li {
+      /*     border:1px solid red; */
+      height: 40px;
+      line-height: 40px;
+      padding: 0 15px;
+      cursor: pointer;
+      position: relative;
+      font-size: 18px;
+      color: #909399;
+      background-color: #fff;
+    }
+
+    .tab-container .tabs li:hover {
+      color: #99AFC6;
+    }
+
+    .tab-container .tabs li:hover:after {
+      width: 100%;
+      left: 0;
+      transition-delay: .1s;
+    }
+
+    .tab-container .tabs li:hover ~ li:after {
+      left: 0;
+    }
+
+
+    .tab-container .tabs li:after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background-color: skyblue;
+      position: absolute;
+      left: 100%;
+      bottom: 0;
+      transition: all .4s;
+    }
+
+    /*第0个盒子css  the end*/
+
+
+    /*第1个盒子css*/
+    .tab-container1 {
+      border: 1px solid #ccc;
+      margin: 50px auto;
+      padding: 20px 0;
+      width: 400px;
+    }
+
+
+    .tab-container1 .title {
+      font-size: 16px;
+      line-height: 16px;
+      color: #F3A310;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+
+    .tab-container1 .tabs1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li, ul {
+      list-style: none;
+    }
+
+
+    .tab-container1 .tabs1 li {
+      /*     border:1px solid red; */
+      height: 40px;
+      line-height: 40px;
+      padding: 0 15px;
+      cursor: pointer;
+      position: relative;
+      font-size: 18px;
+      color: #909399;
+      background-color: #fff;
+    }
+
+    .tab-container1 .tabs1 li.active {
+      color: #99AFC6;
+    }
+
+    .tab-container1 .tabs1 li.active:after {
+      width: 100%;
+      left: 0;
+      transition-delay: .1s;
+    }
+
+    .tab-container1 .tabs1 li.active ~ li:after {
+      left: 0;
+    }
+
+
+    .tab-container1 .tabs1 li:after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background-color: skyblue;
+      position: absolute;
+      left: 100%;
+      bottom: 0;
+      transition: all .4s;
+    }
+
+    /*  第2个盒子css*/
+    .tab-container2 {
+      border: 1px solid #ccc;
+      margin: 50px auto;
+      padding: 20px 0;
+      width: 400px;
+    }
+
+
+    .tab-container2 .title {
+      font-size: 16px;
+      line-height: 16px;
+      color: #F3A310;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+
+    .tab-container2 .tabs2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li, ul {
+      list-style: none;
+    }
+
+
+    .tab-container2 .tabs2 li {
+      /*     border:1px solid red; */
+      height: 40px;
+      line-height: 40px;
+      padding: 0 15px;
+      cursor: pointer;
+      position: relative;
+      font-size: 18px;
+      color: #909399;
+      background-color: #fff;
+    }
+
+    .tab-container2 .tabs2 li.active {
+      color: #99AFC6;
+    }
+
+    .tab-container2 .tabs2 li.active:after {
+      width: 100%;
+      transition-delay: .1s;
+    }
+
+
+    .tab-container2 .tabs2 li:after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background-color: skyblue;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: all .4s;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="tab-container">
+  <p>动画跟随</p>
+  <div class="title">hover to change</div>
+  <ul class="tabs">
+    <li class="tab-item">tab1</li>
+    <li class="tab-item">tab2</li>
+    <li class="tab-item">tab3</li>
+    <li class="tab-item">tab4</li>
+    <li class="tab-item">tab5</li>
+  </ul>
+</div>
+
+<div class="tab-container1">
+  <p>动画跟随</p>
+  <div class="title">click to change</div>
+  <ul class="tabs1">
+    <li class="tab-item active">tab1</li>
+    <li class="tab-item">tab2</li>
+    <li class="tab-item">tab3</li>
+    <li class="tab-item">tab4</li>
+    <li class="tab-item">tab5</li>
+  </ul>
+</div>
+
+<div class="tab-container2">
+  <p>动画从中间展开</p>
+  <div class="title">click to change</div>
+  <ul class="tabs2">
+    <li class="tab-item active">tab1</li>
+    <li class="tab-item">tab2</li>
+    <li class="tab-item">tab3</li>
+    <li class="tab-item">tab4</li>
+    <li class="tab-item">tab5</li>
+  </ul>
+</div>
+<script>
+  //使用querySelectorAll匹配多个选择器
+  let liItem1 = document.querySelectorAll(".tabs1>li")
+  let liItem2 = document.querySelectorAll(".tabs2 li")
+  //把伪数组对象转换为数组，然后可以使用forEach方法
+  // Array.from(liItem1).forEach(tab=>{
+  //   tab.onclick=function () {
+  //     for (let i =0;i<liItem1.length;i++){
+  //
+  //     liItem1[i].classList.remove('active')
+  //     }
+  //     this.classList.add('active')
+  //   }})
+  //
+  // Array.from(liItem2).forEach(tab=>{
+  //   tab.onclick=function () {
+  //     for (let i =0;i<liItem2.length;i++){
+  //
+  //       liItem2[i].classList.remove('active')
+  //     }
+  //     this.classList.add('active')
+  //   }})
+
+
+  function checked(a) {
+    Array.from(a).forEach(tab => {
+      tab.onclick = function () {
+        for (let i = 0; i < a.length; i++) {
+          a[i].classList.remove("active")
+        }
+        this.classList.add("active")
+      }
+    })
+
+  }
+
+  checked(liItem1)
+  checked(liItem2)
+</script>
+</body>
+</html>
